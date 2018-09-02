@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--display the message and button-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message Info"
+            android:textSize="20dp"/>
+
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="#DCDCDC"
+    android:fitsSystemWindows="true"
+    android:screenOrientation="portrait"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_margin="15dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="35dp"
+            android:textSize="17dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Name: " />
+    <Button
+    android:id="@+id/sendsms"
+    android:elevation="10dp"
+    android:padding="5dp"
+    android:layout_marginTop="20dp"
+    android:textColor="@color/bg_screen1"
+    android:background="@drawable/ripple_enable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="20dp"
+    android:text="Send Message" />
+    </LinearLayout></LinearLayout>
