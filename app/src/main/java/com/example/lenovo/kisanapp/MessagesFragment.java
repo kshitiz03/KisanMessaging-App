@@ -3,6 +3,8 @@ package com.example.lenovo.kisanapp;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +17,10 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class MessagesFragment extends Fragment {
-
+    DatabaseHandler handler;
+    WordAdapter adapter;
+    ArrayList<Word> words;
+ListView listView;
 
     public MessagesFragment() {
         // Required empty public constructor
@@ -47,5 +52,18 @@ public class MessagesFragment extends Fragment {
 
         return rootView;
     }
+
+    //get the latest changes on resume into the listview
+    @Override
+    public void onResume()
+    {
+          super.onResume();
+        //do the data changes. In this case, I am refreshing the arrayList cart_list and then calling the listview to refresh.
+        if(words==null){
+            return;
+        }
+        listView.setAdapter(new WordAdapter(this.getActivity(),words));
+    }
+
 
 }

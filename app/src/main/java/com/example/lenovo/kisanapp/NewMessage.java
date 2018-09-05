@@ -95,6 +95,9 @@ public class NewMessage extends AppCompatActivity {
                         Word messge = new Word(name,contact,r,t.format(ts),d.format(ts));
                         handler.addMessage(messge);
                     }
+                    Intent intent = new Intent(NewMessage.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
 
                     //return stringBuffer.toString();
                 } catch (Exception e) {

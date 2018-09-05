@@ -34,6 +34,7 @@ public class ContactInfo extends AppCompatActivity {
                 intent.putExtra(NewMessage.EXTRA_NAME,name);
                 intent.putExtra(NewMessage.EXTRA_CONTACT,contact);
                 startActivity(intent);
+                finish();
             }
         });
 

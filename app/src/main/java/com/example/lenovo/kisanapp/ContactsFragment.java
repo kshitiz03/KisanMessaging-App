@@ -184,6 +184,7 @@ public class ContactsFragment extends Fragment {
                     intent.putExtra(ContactInfo.EXTRA_NAME,currentWord.getName());
                     intent.putExtra(ContactInfo.EXTRA_CONTACT,currentWord.getPhone_no());
                     startActivity(intent);
+
                 }
             });
             // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
